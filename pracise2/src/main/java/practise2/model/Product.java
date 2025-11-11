@@ -30,7 +30,7 @@ public class Product {
 
     private int quantity; 
 
-    private transient MultipartFile imageFile;//used to store image on disk in req not database
+    private transient MultipartFile imageFile;//used to store image on disk in req not database//multipart used to store both binary and text data of image
 
     public Product() {
         // Default constructor
@@ -94,8 +94,5 @@ public class Product {
         this.quantity = quantity;
     }
 
-    // ❌ REMOVE this method to avoid StackOverflowError
-    // public void saveProduct(Product product) {
-    //     product.saveProduct(product);
-    // }
+    
 }
