@@ -26,11 +26,11 @@ public class Product {
     private String description;
 
     @Column(name = "image_path")
-    private String imagePath;
+    private String imagePath;//only manually typed name is stored  in  form not able to store/select  actual image //image1.jpg 
 
-    private int quantity; // ✅ NEW FIELD
+    private int quantity; 
 
-    private transient MultipartFile imageFile;
+    private transient MultipartFile imageFile;//used to store image on disk in req not database
 
     public Product() {
         // Default constructor
