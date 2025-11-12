@@ -23,7 +23,7 @@ public class UserController {
 
      @GetMapping("/users/create")
 	public String UserEmptyRegisterPage(Model model) { //model used to send data from controller to view
-		model.addAttribute("user",new User());
+		model.addAttribute("user",new User());//model used to send data from controller to view
     	 return "user-create";
 	}
   
