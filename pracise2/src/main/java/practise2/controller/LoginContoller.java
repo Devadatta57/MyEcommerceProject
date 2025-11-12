@@ -20,8 +20,8 @@ public class LoginContoller {
 	UserService lservice;
 	
 	@GetMapping("/login")
-	public String showEmptyLoginPage() {
-		return "login";
+	public String showEmptyLoginPage() { //We use Model (or ModelAndView) only when we want to pass data from the backend to the frontend view.                  
+		return "login";//here no need of model
 	}
 	
 	@PostMapping("/login")
