@@ -10,7 +10,8 @@ import practise2.model.User;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
- 
+       //UserController -Checks once during login-When user submits login form
+	//AdminController -Checks authorization for admin area-Every time /admin/... URL is accessed
 	@GetMapping("/dashboard")
 	public String AdminLoginPage(HttpSession session) {
 		User loggedInUser=(User)session.getAttribute("loggedInUser");
