@@ -20,8 +20,8 @@ public class LoginContoller {
 	UserService lservice;
 	
 	@GetMapping("/login")
-	public String showEmptyLoginPage() { //We use Model (or ModelAndView) only when we want to pass data from the backend to the frontend view.                  
-		return "login";//here no need of model
+	public String showEmptyLoginPage() { //We use Model (or ModelAndView) only when we want to pass data from the backend to the frontend view here no need of model              
+		return "login"// to jsp 
 	}
 	
 	@PostMapping("/login")
@@ -33,7 +33,7 @@ public class LoginContoller {
 			if(user.getRole().equals("ADMIN")){
 			return "redirect:/admin/dashboard";
 			}else {
-				return "redirect:/products";
+				return "redirect:/products";// go to controller to jsp
 			}
 		}
 		else {
