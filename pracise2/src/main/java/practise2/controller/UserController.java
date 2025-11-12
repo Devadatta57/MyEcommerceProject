@@ -22,7 +22,7 @@ public class UserController {
 	UserService uservice;
 
      @GetMapping("/users/create")
-	public String UserEmptyRegisterPage(Model model) {
+	public String UserEmptyRegisterPage(Model model) { //model used to send data from controller to view
 		model.addAttribute("user",new User());
     	 return "user-create";
 	}
@@ -35,7 +35,7 @@ public class UserController {
      }
      
      @PostMapping("/users/create")
-     public String UserSubmitRegister(@ModelAttribute User user) {
+     public String UserSubmitRegister(@ModelAttribute User user) { //while receiving the data back from the form no model modelattribute enouh
     	user= uservice.saveUser(user);
     		return "redirect:/login";	
      }
