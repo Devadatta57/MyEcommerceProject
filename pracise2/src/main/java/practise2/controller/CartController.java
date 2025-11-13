@@ -92,7 +92,9 @@ public class CartController {
 	public String UpdateAndRemoveProduct(@RequestParam int id,@RequestParam int quantity,HttpSession session){
 	List<OrderItem> cartItems=	getCartItemsFromSession(session);
 		List<OrderItem> orderItems=new ArrayList<>();
-		for(OrderItem item:cartItems) {
+		for(OrderItem item:cartItems) {////Removes only when quantity == 0
+					// Updates otherwise
+					// Never clears the full list
 			if(item.getProducts().getId()==id) {
 				if(quantity==0) {
 				orderItems.add(item);
